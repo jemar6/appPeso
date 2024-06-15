@@ -1,0 +1,53 @@
+.box {
+  height: 80vh;
+  width: 40vw;
+  min-width: 400px;
+
+  border-radius: 225px 15px 225px 15px / 15px 225px 15px 255px;
+  line-height: 1.5em;
+  background: #dadff7;
+
+  border: 3px solid #000;
+}
+
+.topMenu {
+  height: 10vh;
+  width: 40vw;
+
+  min-width: 400px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.content {
+  height: 60vh;
+  width: 40vw;
+
+  min-width: 400px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.bottomMenu {
+  height: 10vh;
+  width: 40vw;
+
+  min-width: 400px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding-right: 40px;
+  padding-left: 40px;
+}
