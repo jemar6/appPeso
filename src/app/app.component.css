@@ -1,7 +1,7 @@
 /* Top Menu */
 .topMenu {
   height: 10vh;
-  background-color: var(--primary);
+  background-color: var(--bsecondary);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -12,6 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 2vh;
 
   height: 100%;
   width: 100%;
@@ -28,10 +29,10 @@
 }
 
 .btnCollapse {
-  height: 1.5vh;
+  height: 3vh;
   width: 100vw;
   margin-top: auto;
-  background-color: var(--secondary);
+  background-color: var(--bsecondary);
 
   display: flex;
   align-items: center;
@@ -44,7 +45,7 @@
 /* Content */
 .page {
   height: 80vh;
-  background-color: var(--bg);
+  background-color: var(--background);
 
   color: var(--text);
 
@@ -68,14 +69,32 @@
 
 .numberInput {
   width: 30%;
+  background-color: var(--bsecondary);
+  color: var(--text);
+  border: none;
+  border-radius: 0.2rem;
+
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 /* Bottom Menu */
 .bottomMenu {
   height: 10vh;
-  background-color: var(--primary);
+  background-color: var(--bsecondary);
 
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  color: var(--text);
+}
+
+.bottomMenu button {
+  height: 100%;
+  width: 100%;
 }
