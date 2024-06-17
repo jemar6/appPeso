@@ -5,16 +5,22 @@
   box-sizing: border-box;
 }
 
-/* Background */
-body {
-  height: 100vh;
-  width: 100vw;
+/* Paleta de colores y sombras */
+:root {
+  --text: #feebd5;
+  --bg: #120f0c;
+  --primary: #cabbae;
+  --secondary: #999e03;
+  --accent: #cdfb36;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
 
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
-  background-image: radial-gradient(#50495b 2px, transparent 5px);
-  background-size: 70px 70px;
-  background-color: #3c3744;
+  background-color: var(--secondary);
 }

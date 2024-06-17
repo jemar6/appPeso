@@ -1,0 +1,81 @@
+/* Top Menu */
+.topMenu {
+  height: 10vh;
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.optionsButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 100%;
+  width: 100%;
+}
+
+.leftButtons {
+  display: flex;
+  gap: 0.6rem;
+  padding-left: 1rem;
+}
+
+.rightButtons {
+  padding-right: 1rem;
+}
+
+.btnCollapse {
+  height: 1.5vh;
+  width: 100vw;
+  margin-top: auto;
+  background-color: var(--secondary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  cursor: pointer;
+}
+
+/* Content */
+.page {
+  height: 80vh;
+  background-color: var(--bg);
+
+  color: var(--text);
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.objLabels {
+  display: flex;
+}
+
+.objRowLabels {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.numberInput {
+  width: 30%;
+}
+
+/* Bottom Menu */
+.bottomMenu {
+  height: 10vh;
+  background-color: var(--primary);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

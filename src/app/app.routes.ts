@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
-import { PesadasComponent } from './pages/pesadas/pesadas.component';
-import { ObjetivosComponent } from './pages/objetivos/objetivos.component';
+import { GoalsComponent } from './pages/goals/goals.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { WeighsInComponent } from './pages/weighs-in/weighs-in.component';
 
 export const routes: Routes = [
-  { path: 'pesadas', component: PesadasComponent },
-  { path: 'objetivos', component: ObjetivosComponent },
-  { path: '', redirectTo: '/objetivos', pathMatch: 'full' },
+  { path: 'weighs', component: WeighsInComponent },
+  { path: 'goals', component: GoalsComponent },
+  { path: '', redirectTo: '/goals', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
