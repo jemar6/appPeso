@@ -64,29 +64,54 @@
 
 <!-- page -->
 <div class="page">
-  <div class="objLabels">
-    <div class="objRowLabels">
-      <label>Peso Actual</label>
-      <input class="numberInput" />
+  <div class="GoalsRowLabels">
+    <div class="GoalsItemLabels">
+      <label for="actualWeight">Peso Actual</label>
+      <input
+        id="actualWeight"
+        type="number"
+        [formControl]="actualWeight"
+        class="numberInput"
+      />
     </div>
-    <div class="objRowLabels">
-      <label>Peso Objetivo</label>
-      <input class="numberInput" />
+    <div class="GoalsItemLabels">
+      <label for="goalWeight">Peso Objetivo</label>
+      <input
+        id="goalWeight"
+        type="number"
+        [formControl]="goalWeight"
+        class="numberInput"
+      />
     </div>
   </div>
-  <div class="objLabels">
-    <div class="objRowLabels">
+  <div class="GoalsRowLabels">
+    <div class="GoalsItemLabels">
       <label>Fecha Inicio</label>
-      <input class="numberInput" />
+      <input
+        id="initialDate"
+        type="date"
+        [formControl]="initialDate"
+        class="dateInput"
+      />
     </div>
-    <div class="objRowLabels">
+    <div class="GoalsItemLabels">
       <label>Fecha Fin</label>
-      <input class="numberInput" />
+      <input
+        id="finalDate"
+        type="date"
+        [formControl]="finalDate"
+        class="dateInput"
+      />
     </div>
   </div>
-  <div class="objRowLabels">
-    <label>Diferencia Semanal</label>
-    <input class="numberInput" />
+  <div class="GoalsItemLabels">
+    <label for="weeklyDiff">Diferencia Semanal</label>
+    <input
+      id="weeklyDiff"
+      type="number"
+      [formControl]="weeklyDiff"
+      class="numberInput disabled"
+    />
   </div>
 </div>
 
