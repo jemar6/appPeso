@@ -1,0 +1,66 @@
+.page {
+  height: 80vh;
+  background-color: var(--background);
+  color: var(--text);
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.GoalsRowLabels {
+  display: flex;
+  gap: 2rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.GoalsItemLabels {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.numberInput {
+  width: 100%;
+  background-color: var(--bsecondary);
+  color: var(--text);
+  border: none;
+  border-radius: 0.2rem;
+
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.dateInput {
+  width: 100%;
+  background-color: var(--bsecondary);
+  color: var(--text);
+  border: none;
+  border-radius: 0.2rem;
+
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.disabled {
+  opacity: 50%;
+}
+
+/* Ocultar flechas en navegadores Webkit (Chrome, Safari, Edge) */
+.dateInput::-webkit-outer-spin-button,
+.dateInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

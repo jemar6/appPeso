@@ -1,1 +1,48 @@
-<p>pesadas works!</p>
+<div class="page">
+  <div class="container__slider">
+    <div class="container">
+      <input type="radio" name="slider" id="item-1" />
+      <input type="radio" name="slider" id="item-2" checked />
+      <input type="radio" name="slider" id="item-3" />
+
+      <div class="cards">
+        <label class="weighIn" for="item-1" id="selector-1">
+          <div class="box">
+            <label>{{ weights[0].date }}</label>
+            <input
+              id="actualWeight"
+              type="number"
+              class="dateInput"
+              (focus)="selectInput($event)"
+            />
+            <button class="addButton">Add</button>
+          </div>
+        </label>
+        <label class="weighIn" for="item-2" id="selector-2">
+          <div class="box">
+            <label>{{ weights[1].date }}</label>
+            <input
+              id="actualWeight"
+              type="number"
+              class="dateInput"
+              (focus)="selectInput($event)"
+            />
+            <button class="addButton">Add</button>
+          </div>
+        </label>
+        <label class="weighIn" for="item-3" id="selector-3">
+          <div class="box">
+            <label>{{ weights[2].date }}</label>
+            <input
+              id="actualWeight"
+              type="number"
+              class="dateInput"
+              (focus)="selectInput($event)"
+            />
+            <button class="addButton">Add</button>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>

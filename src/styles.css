@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Chivo%20Mono:700|Noto%20Sans%20Inscriptional%20Parthian:400");
 
-/* Eliminar márgenes y padding por defecto */
+/* Eliminar márgenes y padding por defecto. Aplicar fuente. */
 * {
   margin: 0;
   padding: 0;
@@ -9,16 +9,15 @@
   font-weight: 100;
 }
 
-/* Paleta de colores y sombras */
+/* Paleta de colores */
 :root {
   --background: hsla(216, 100%, 4%, 1);
   --bsecondary: hsla(211, 100%, 12%, 1);
   --bprimary: hsla(209, 100%, 20%, 1);
-  --ysecondary: hsla(46, 100%, 50%, 1);
-  --yprimary: hsla(50, 100%, 52%, 1);
   --text: #cad8de;
 }
 
+/* Estilos báscios botón */
 .btn {
   border: none;
   cursor: pointer;

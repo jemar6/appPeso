@@ -1,34 +1,42 @@
 /* Top Menu */
-.topMenu {
+.top-menu {
   height: 10vh;
   background-color: var(--bsecondary);
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  transition:
+    height 0.3s ease,
+    opacity 0.3s ease;
+  position: relative;
 }
 
-.optionsButtons {
+.top-menu.collapsed {
+  height: 3vh;
+  opacity: 1;
+}
+
+.top-menu__options-buttons {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 2vh;
 
   height: 100%;
   width: 100%;
 }
 
-.leftButtons {
+.top-menu__left-buttons {
   display: flex;
   gap: 0.6rem;
   padding-left: 1rem;
 }
 
-.rightButtons {
+.top-menu__right-buttons {
   padding-right: 1rem;
 }
 
-.btnCollapse {
+.top-menu__btn-collapse {
   height: 3vh;
   width: 100vw;
   margin-top: auto;
@@ -40,67 +48,36 @@
 
   border: none;
   cursor: pointer;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: bottom 0.3s ease;
 }
 
-/* Content */
-.page {
-  height: 80vh;
+.collapse-icon {
+  transition: transform 0.3s ease;
+}
+
+.collapse-icon.rotated {
+  transform: rotate(180deg);
+}
+
+/* Main Content */
+.main-content {
+  transition: padding-top 0.3s ease;
+  padding-top: 0vh;
   background-color: var(--background);
-  color: var(--text);
-
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-evenly;
 }
 
-.GoalsRowLabels {
-  display: flex;
-  gap: 2rem;
-  margin-right: 2rem;
-  margin-left: 2rem;
-}
-
-.GoalsItemLabels {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.numberInput {
-  width: 100%;
-  background-color: var(--bsecondary);
-  color: var(--text);
-  border: none;
-  border-radius: 0.2rem;
-
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
-  padding-left: 0.3rem;
-  padding-right: 0.3rem;
-  font-size: 1rem;
-  text-align: center;
-}
-
-.dateInput {
-  width: 100%;
-  background-color: var(--bsecondary);
-  color: var(--text);
-  border: none;
-  border-radius: 0.2rem;
-
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
-  padding-left: 0.3rem;
-  padding-right: 0.3rem;
-  font-size: 1rem;
-  text-align: center;
+.main-content.collapsed {
+  transition: padding-top 0.3s ease;
+  padding-top: 7vh;
+  background-color: var(--background);
 }
 
 /* Bottom Menu */
-.bottomMenu {
+.bottom-menu {
   height: 10vh;
   background-color: var(--bsecondary);
 
@@ -111,11 +88,12 @@
   color: var(--text);
 }
 
-.bottomMenu button {
+.bottom-menu button {
   height: 100%;
   width: 100%;
 }
 
-.disabled {
-  opacity: 50%;
+.bottom-menu label {
+  min-width: 20%;
+  text-align: center;
 }

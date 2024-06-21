@@ -1,1 +1,52 @@
-
+<div class="page">
+  <div class="GoalsRowLabels">
+    <div class="GoalsItemLabels">
+      <label for="actualWeight">Peso Actual</label>
+      <input
+        id="actualWeight"
+        type="number"
+        [formControl]="actualWeight"
+        class="numberInput disabled"
+      />
+    </div>
+    <div class="GoalsItemLabels">
+      <label for="goalWeight">Peso Objetivo</label>
+      <input
+        id="goalWeight"
+        type="number"
+        [formControl]="goalWeight"
+        class="numberInput"
+        (focus)="selectInput($event)"
+      />
+    </div>
+  </div>
+  <div class="GoalsRowLabels">
+    <div class="GoalsItemLabels">
+      <label>Fecha Inicio</label>
+      <input
+        id="initialDate"
+        type="date"
+        [formControl]="initialDate"
+        class="dateInput"
+      />
+    </div>
+    <div class="GoalsItemLabels">
+      <label>Fecha Fin</label>
+      <input
+        id="finalDate"
+        type="date"
+        [formControl]="finalDate"
+        class="dateInput disabled"
+      />
+    </div>
+  </div>
+  <div class="GoalsItemLabels">
+    <label for="weeklyDiff">Diferencia Semanal</label>
+    <input
+      id="weeklyDiff"
+      type="number"
+      [formControl]="weeklyDiff"
+      class="numberInput disabled"
+    />
+  </div>
+</div>

@@ -1,8 +1,8 @@
 <!-- topMenu -->
-<div class="topMenu">
+<header class="top-menu" [class.collapsed]="isCollapsed">
   <!-- optionsButtons -->
-  <div class="optionsButtons">
-    <div class="leftButtons">
+  <div class="top-menu__options-buttons" *ngIf="!isCollapsed">
+    <div class="top-menu__left-buttons">
       <button class="btn">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@
         </svg>
       </button>
     </div>
-    <div class="rightButtons">
+    <div class="top-menu__right-buttons">
       <button class="btn">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -48,8 +48,10 @@
   </div>
   <!-- collapseButton -->
   <div>
-    <button class="btnCollapse">
+    <button class="top-menu__btn-collapse" (click)="toggleCollapse()">
       <svg
+        class="collapse-icon"
+        [class.rotated]="isCollapsed"
         xmlns="http://www.w3.org/2000/svg"
         height="2rem"
         viewBox="0 -960 960 960"
@@ -60,64 +62,16 @@
       </svg>
     </button>
   </div>
-</div>
+</header>
 
 <!-- page -->
-<div class="page">
-  <div class="GoalsRowLabels">
-    <div class="GoalsItemLabels">
-      <label for="actualWeight">Peso Actual</label>
-      <input
-        id="actualWeight"
-        type="number"
-        [formControl]="actualWeight"
-        class="numberInput"
-      />
-    </div>
-    <div class="GoalsItemLabels">
-      <label for="goalWeight">Peso Objetivo</label>
-      <input
-        id="goalWeight"
-        type="number"
-        [formControl]="goalWeight"
-        class="numberInput"
-      />
-    </div>
-  </div>
-  <div class="GoalsRowLabels">
-    <div class="GoalsItemLabels">
-      <label>Fecha Inicio</label>
-      <input
-        id="initialDate"
-        type="date"
-        [formControl]="initialDate"
-        class="dateInput"
-      />
-    </div>
-    <div class="GoalsItemLabels">
-      <label>Fecha Fin</label>
-      <input
-        id="finalDate"
-        type="date"
-        [formControl]="finalDate"
-        class="dateInput"
-      />
-    </div>
-  </div>
-  <div class="GoalsItemLabels">
-    <label for="weeklyDiff">Diferencia Semanal</label>
-    <input
-      id="weeklyDiff"
-      type="number"
-      [formControl]="weeklyDiff"
-      class="numberInput disabled"
-    />
-  </div>
-</div>
+<main class="main-content" [class.collapsed]="isCollapsed">
+  <router-outlet />
+</main>
 
 <!-- bottomMenu -->
-<div class="bottomMenu">
-  <button class="btn">
+<nav class="bottom-menu">
+  <button class="btn" (click)="navigate()">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       height="2rem"
@@ -129,7 +83,7 @@
     </svg>
   </button>
   <label>{{ page }}</label>
-  <button class="btn">
+  <button class="btn" (click)="navigate()">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       height="2rem"
@@ -140,4 +94,4 @@
       <path d="M426-342v-276l138 138-138 138Z" />
     </svg>
   </button>
-</div>
+</nav>
